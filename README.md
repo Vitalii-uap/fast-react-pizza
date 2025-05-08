@@ -2,6 +2,9 @@
 
 A React application for ordering pizza, built with Redux, React Router, and Tailwind CSS.
 
+## Demo
+Try the app live: [https://fast-react-pizza-8gkcv880r-vitalii-uaps-projects.vercel.app](https://fast-react-pizza-8gkcv880r-vitalii-uaps-projects.vercel.app)
+
 ## Features
 - Browse a menu of pizzas and add them to your cart.
 - Create and submit orders with user details.
