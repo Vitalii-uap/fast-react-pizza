@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pizza-primary: #ff6347; /* Tomato red */
+  --color-pizza-secondary: #ffd700; /* Gold */
+  --font-family-pizza: "Roboto Mono", monospace;
+}
+
+@layer components {
+  .input {
+    @apply rounded-full border border-stone-300 px-4 py-2 text-sm transition duration-300 placeholder:text-stone-400 focus:shadow-md focus:ring focus:ring-yellow-400 focus:outline-none md:px-6 md:py-3;
+  }
+  /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.pizza-secondary) 0 0);
+    background:
+      var(--c) 0% 50%,
+      var(--c) 50% 50%,
+      var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position:
+        0% 0%,
+        50% 50%,
+        100% 50%;
+    }
+    40% {
+      background-position:
+        0% 100%,
+        50% 0%,
+        100% 50%;
+    }
+    60% {
+      background-position:
+        0% 50%,
+        50% 100%,
+        100% 0%;
+    }
+    80% {
+      background-position:
+        0% 50%,
+        50% 50%,
+        100% 100%;
+    }
+  }
+}
